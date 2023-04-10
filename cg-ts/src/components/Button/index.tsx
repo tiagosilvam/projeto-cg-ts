@@ -1,7 +1,16 @@
-export function Button({name, type, icon, onClick}: any) {
+interface Props {
+    name: string;
+    type?: "button" | "submit";
+    icon?: any;
+    onClick?: () => void;
+    color: string;
+    hover: string
+}
+
+export function Button({ name, type, icon, onClick, color, hover }: Props) {
     return (
         <button
-            className='bg-blue-600 rounded font-semibold text-white h-10 hover:bg-blue-700 mt-4 px-5 py-2.5 text-center inline-flex items-center justify-center'
+            className={`${color} ${hover} rounded text-white h-10 mt-4 px-5 py-2.5 text-center inline-flex items-center justify-center`}
             type={type}
             onClick={onClick}
         >

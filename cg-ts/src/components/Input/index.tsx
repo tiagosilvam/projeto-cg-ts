@@ -16,7 +16,7 @@ export const Input = forwardRef<HTMLInputElement, Props>((props, ref) => {
     return (
         <div>
             <input
-                className={`border ${props.error ? "border-red-400 text-red-400" : "border-gray-200"} text-gray-900 text-sm rounded-lg hover:bg-gray-50 block w-full p-2.5`}
+                className={`border ${props.error ? "border-red-400 text-red-400" : "border-gray-200"} text-sm rounded-lg hover:bg-gray-50 block w-full p-2.5 bg-transparent`}
                 ref={ref}
                 {...props}
             />

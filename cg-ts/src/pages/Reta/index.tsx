@@ -115,11 +115,15 @@ export function Reta() {
             name="Desenhar"
             type="submit"
             icon={<PaintBrushIcon className="w-6 h-6 mr-3" />}
+            color="bg-blue-500"
+            hover="hover:bg-blue-900"
           />
           <Button
             name="Limpar"
             type="button"
             icon={<TrashIcon className="w-6 h-6 mr-3" />}
+            color="bg-emerald-500"
+            hover="hover:bg-emerald-600"
             onClick={() => {
               clear(canvasContext)
               setLine(false)

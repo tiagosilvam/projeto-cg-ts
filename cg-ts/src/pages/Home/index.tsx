@@ -44,6 +44,8 @@ export function Home() {
             name="Animar!"
             onClick={draw}
             icon={<PlayIcon className="w-6 h-6 mr-3" />}
+            color="bg-green-500"
+            hover="hover:bg-green-600"
         />
     )
 }
