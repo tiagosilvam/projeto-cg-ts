@@ -18,7 +18,7 @@ import { PaintBrushIcon, TrashIcon } from '@heroicons/react/24/solid'
 
 const createUserFormSchema = z.object({
   raio: z.coerce.number()
-    .min(-300, "Valor mínimo: -300")
+    .min(1, "Valor mínimo: 1")
     .max(300, "Valor máximo: 300")
 })
 
