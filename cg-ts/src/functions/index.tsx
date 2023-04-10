@@ -25,7 +25,7 @@ export const clear = (ctx: CanvasRenderingContext2D) => {
 };
 
 // Reta
-export const getRetaPontoMedio = (ctx: CanvasRenderingContext2D, posX: number, posY: number, posX2: number, posY2: number) => {
+export const desenharRetaPM = (ctx: CanvasRenderingContext2D, posX: number, posY: number, posX2: number, posY2: number) => {
   // Iterators, counters required by algorithm
   let x, y, dx, dy, px, py, xEnd, yEnd; // Calculate line deltas
   dx = posX2 - posX;

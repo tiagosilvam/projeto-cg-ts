@@ -13,7 +13,7 @@ import { Alert } from '../../components/Alert'
 import { RadioButton } from '../../components/RadioButton'
 
 // Functions
-import { desenharRetaDDA, getRetaPontoMedio, setLines, clear } from '../../functions'
+import { desenharRetaDDA, desenharRetaPM, setLines, clear } from '../../functions'
 
 // Icons
 import { PaintBrushIcon, TrashIcon } from '@heroicons/react/24/solid'
@@ -54,7 +54,7 @@ export function Reta() {
     setLine(true)
     value === "DDA"
       ? desenharRetaDDA(canvasContext, posX, posY, posX2, posY2)
-      : getRetaPontoMedio(canvasContext, posX, posY, posX2, posY2);
+      : desenharRetaPM(canvasContext, posX, posY, posX2, posY2);
     setMessage(`Desenhado usando o algorítmo ${value}.`);
   }
 
