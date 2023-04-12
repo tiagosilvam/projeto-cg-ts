@@ -17,9 +17,11 @@ export function Layout() {
     return (
         <div className='h-screen flex flex-col'>
             <Navbar />
-            <div className="flex flex-row justify-evenly items-center mt-7">
+            <div className="flex flex-row justify-evenly items-center h-full bg-zinc-100">
                 <Canvas refCanvas={canvasRef} />
-                <Outlet context={canvasContext} />
+                <div className='bg-white rounded-xl px-6 py-4 shadow-md'>
+                    <Outlet context={canvasContext} />
+                </div>
             </div>
         </div>
     )

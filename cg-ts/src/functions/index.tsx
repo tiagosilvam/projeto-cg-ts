@@ -11,7 +11,7 @@ export function setPixel(ctx: CanvasRenderingContext2D, x: number, y: number) {
 
 export const setLines = (ctx: CanvasRenderingContext2D) => {
   // Traça os quadrantes
-  ctx.strokeStyle = 'rgba(255,255,255, .2)';
+  ctx.strokeStyle = 'rgba(255,255,255, 0.3)';
   ctx.moveTo(0, 300);
   ctx.lineTo(399, 300);
   ctx.moveTo(400, 0);

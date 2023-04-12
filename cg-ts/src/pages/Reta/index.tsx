@@ -60,7 +60,8 @@ export function Reta() {
 
   return (
     <div className='flex flex-col'>
-      <span className='text-3xl mb-5'>Desenhar Reta</span>
+      <span className='text-3xl mb-2'>Desenhar Reta</span>
+      <hr className="h-px bg-gray-100 border-0 mb-4" />
       <div className='flex flex row gap-3 mb-5'>
         <RadioButton
           name='Radio'
@@ -70,53 +71,53 @@ export function Reta() {
         />
         <RadioButton
           name='Radio'
-          label='PM'
+          label='Ponto médio'
           onClick={() => setValue("ponto médio")}
         />
       </div>
       {message && <Alert message={message} />}
       <form className='flex flex-col gap-2 items-center' onSubmit={handleSubmit(createUser)}>
         <div className="grid gap-2 md:grid-cols-2">
-            <Input
-              placeholder='Ponto X'
-              type='number'
-              step="any"
-              required
-              {...register('posX')}
-              error={errors.posX}
-            />
-            <Input
-              placeholder='Ponto Y'
-              type='number'
-              step="any"
-              required
-              {...register('posY')}
-              error={errors.posY}
-            />
-            <Input
-              placeholder='Ponto X2'
-              type='number'
-              step="any"
-              required
-              {...register('posX2')}
-              error={errors.posX2}
-            />
-            <Input
-              placeholder='Ponto Y2'
-              type='number'
-              step="any"
-              required
-              {...register('posY2')}
-              error={errors.posY2}
-            />
+          <Input
+            placeholder='Ponto X'
+            type='number'
+            step="any"
+            required
+            {...register('posX')}
+            error={errors.posX}
+          />
+          <Input
+            placeholder='Ponto Y'
+            type='number'
+            step="any"
+            required
+            {...register('posY')}
+            error={errors.posY}
+          />
+          <Input
+            placeholder='Ponto X2'
+            type='number'
+            step="any"
+            required
+            {...register('posX2')}
+            error={errors.posX2}
+          />
+          <Input
+            placeholder='Ponto Y2'
+            type='number'
+            step="any"
+            required
+            {...register('posY2')}
+            error={errors.posY2}
+          />
         </div>
-        <div className='flex flex-col w-3/6'>
+        <div className='flex gap-2'>
           <Button
             name="Desenhar"
             type="submit"
             icon={<PaintBrushIcon className="w-6 h-6 mr-3" />}
             color="bg-blue-500"
-            hover="hover:bg-blue-900"
+            hover="hover:bg-blue-600"
           />
           <Button
             name="Limpar"
@@ -126,6 +127,7 @@ export function Reta() {
             hover="hover:bg-emerald-600"
             onClick={() => {
               clear(canvasContext)
+              setMessage(null)
               setLine(false)
             }}
           />

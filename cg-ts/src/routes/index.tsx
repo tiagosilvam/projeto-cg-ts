@@ -4,6 +4,7 @@ import { Pixel } from "../pages/Pixel"
 import { Reta } from '../pages/Reta'
 import { Layout } from '../layout'
 import { Circulo } from '../pages/Circulo'
+import { Canvas } from '../components/Canvas'
 
 export function AppRoutes() {
     return (
@@ -15,6 +16,7 @@ export function AppRoutes() {
                     <Route path='reta' element={<Reta />} />
                     <Route path='circulo' element={<Circulo />} />
                 </Route>
+                <Route path="/viewport" element={<Canvas />} />
             </Routes>
         </BrowserRouter>
     )

@@ -43,8 +43,9 @@ export function Circulo() {
 
   return (
     <div className='flex flex-col'>
-      <span className='text-3xl mb-10'>Desenhar Circulo</span>
-      <form className='flex flex-col gap-4 items-center' onSubmit={handleSubmit(createUser)}>
+      <span className='text-3xl mb-2'>Desenhar Círculo</span>
+      <hr className="h-px bg-gray-100 border-0 mb-4" />
+      <form className='flex flex-col gap-2 items-center' onSubmit={handleSubmit(createUser)}>
         <div className="grid gap-2 md:grid-cols-2">
           <Input
             placeholder='Raio'
@@ -55,13 +56,13 @@ export function Circulo() {
             error={errors.raio}
           />
         </div>
-        <div className='flex flex-col w-3/6'>
+        <div className='flex gap-2'>
           <Button
             name="Desenhar"
             type="submit"
             icon={<PaintBrushIcon className="w-6 h-6 mr-3" />}
             color="bg-blue-500"
-            hover="hover:bg-blue-900"
+            hover="hover:bg-blue-600"
           />
           <Button
             name="Limpar"
